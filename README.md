@@ -1,6 +1,6 @@
 # iOS Dev Mentoring #008 - Test-driven MVVM with RxSwift
 
-[![Build Status](https://travis-ci.com/essentialdevelopercom/composing-view-controllers-pt2.svg?branch=master)](https://travis-ci.com/essentialdevelopercom/mvvm-with-rxswift-mentoring-008)
+![](https://github.com/essentialdevelopercom/mvvm-with-rxswift-mentoring-008/workflows/CI/badge.svg)
 
 Project and source code of the [iOS Dev Mentoring #008 - Test-driven MVVM with RxSwift](https://www.essentialdeveloper.com/ios-dev-mentoring-008-test-driven-mvvm-with-rxswift).
 
