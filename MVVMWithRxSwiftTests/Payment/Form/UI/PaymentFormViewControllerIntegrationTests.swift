@@ -52,9 +52,13 @@ class PaymentFormViewControllerIntegrationTests: XCTestCase {
     private func makeSUT(service: SuggestionsServiceStub = .init()) -> (PaymentFormViewController, PaymentFormViewModel) {
         let vm = PaymentFormViewModel(service: service)
         let sut = PaymentFormViewController(viewModel: vm)
-        sut.loadViewIfNeeded()
+		sut.view.frame = iPhone12Frame
         return (sut, vm)
     }
+	
+	private var iPhone12Frame: CGRect {
+		CGRect(x: 0, y: 0, width: 585, height: 1266)
+	}
     
     private class ViewModelStateSpy {
         private(set) var current: PaymentFormViewModel.State?

@@ -50,34 +50,34 @@ public class FieldCell: UITableViewCell {
     
     private func setup() {
         cellTitleLabel.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(cellTitleLabel)
+		contentView.addSubview(cellTitleLabel)
         
         inputTextField.keyboardType = .default
         inputTextField.inputAccessoryView = nil
         inputTextField.borderStyle = .roundedRect
         inputTextField.translatesAutoresizingMaskIntoConstraints = false
-        addSubview(inputTextField)
+		contentView.addSubview(inputTextField)
         
         focusButton.translatesAutoresizingMaskIntoConstraints = false
         focusButton.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
-        addSubview(focusButton)
+		contentView.addSubview(focusButton)
                 
         NSLayoutConstraint.activate([
-            cellTitleLabel.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
-            cellTitleLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -16),
-            cellTitleLabel.topAnchor.constraint(equalTo: topAnchor, constant: 16),
+			cellTitleLabel.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
+			cellTitleLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -16),
+			cellTitleLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             cellTitleLabel.heightAnchor.constraint(equalToConstant: 16),
 
-            inputTextField.leftAnchor.constraint(equalTo: leftAnchor, constant: 16),
-            inputTextField.rightAnchor.constraint(equalTo: rightAnchor, constant: -16),
+			inputTextField.leftAnchor.constraint(equalTo: contentView.leftAnchor, constant: 16),
+			inputTextField.rightAnchor.constraint(equalTo: contentView.rightAnchor, constant: -16),
             inputTextField.topAnchor.constraint(equalTo: cellTitleLabel.bottomAnchor, constant: 16),
             inputTextField.heightAnchor.constraint(equalToConstant: 50),
-            inputTextField.bottomAnchor.constraint(lessThanOrEqualTo: bottomAnchor, constant: -16),
+			inputTextField.bottomAnchor.constraint(lessThanOrEqualTo: contentView.bottomAnchor, constant: -16),
             
-            focusButton.topAnchor.constraint(equalTo: topAnchor),
-            focusButton.leftAnchor.constraint(equalTo: leftAnchor),
-            focusButton.rightAnchor.constraint(equalTo: rightAnchor),
-            focusButton.bottomAnchor.constraint(equalTo: bottomAnchor)
+			focusButton.topAnchor.constraint(equalTo: contentView.topAnchor),
+			focusButton.leftAnchor.constraint(equalTo: contentView.leftAnchor),
+			focusButton.rightAnchor.constraint(equalTo: contentView.rightAnchor),
+			focusButton.bottomAnchor.constraint(equalTo: contentView.bottomAnchor)
         ])
     }
     
